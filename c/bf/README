@@ -1,4 +1,0 @@
-#### BF Interpreter
-Contains a single while keyword, implicit types and returning and is very messy :) 
-#### usage
-	cat src.bf | ./bf
