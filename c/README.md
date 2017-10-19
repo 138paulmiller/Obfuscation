@@ -30,3 +30,35 @@ Main declared with implicit int return type and parameter types
 f() implicitly returns an integer of data retrieved by getchar 
 Notice, the return keyword can only be omitted for getchar(); and
 declaring something such as f(a){a+32;} will not return a+32!
+
+##### Array Initialization
+	A[] = {
+		#include "filename"
+	}
+	filename  = 
+	 ________________
+	|                |
+	| 1,2,3,4,5,5,6, |
+	| 7,8,9,10,11,...|
+	|________________|
+
+Since preprocessor directives perform text substitution before compiling, this feature can be taken advantage	
+of to define blocks of data outside the C program. This does not neccessarily have to be done with arrays, but
+is often useful for programs that read externally processed array data. The only downside is this program must be recompiled
+if any of the data within the file is changed.
+
+##### Hidden Source Macro Parameter
+	HELLO("World")
+This C source code is valid and will execute if compiled with very specific compiler flags and arguments. 
+	gcc -D'HELLO(X)=int main(){printf("\nHello %s\n",X); }' foo.c -o foo 
+GCC allows for macro definitions as arguments into the compiler. Compiling the source code with the above 
+command is equivalent to the basic compilation command of the following:
+	#define HELLO(X) int main(){printf("\nHello %s\n",X); }
+	HELLO("World")
+Which is essentially compiled to: 
+	int main(){printf("\nHello %s\n","World"); 
+
+
+
+
+

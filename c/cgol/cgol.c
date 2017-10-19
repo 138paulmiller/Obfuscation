@@ -1,0 +1,3 @@
+BIGBANG 
+#include UNIVERSE
+COOL main(S,P,A,C,E) FOR(EVER) 

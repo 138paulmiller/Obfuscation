@@ -1,0 +1,7 @@
+#### Obfuscated Universe Simulator
+The following is a basic Conway's Game Of Life program.
+###### Instructions
+	cat cgol.c
+	make cgol.c
+	./cgol 
+ 
