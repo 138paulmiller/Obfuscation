@@ -1,2 +1,3 @@
+CC=clang
 all:
-	gcc -w bf.c -o bf -lm
+	$(CC) -w bf.c -o bf -lm
