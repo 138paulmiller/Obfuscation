@@ -50,12 +50,15 @@ if any of the data within the file is changed.
 ##### Hidden Source Macro Parameter
 	HELLO("World")
 This C source code is valid and will execute if compiled with very specific compiler flags and arguments. 
+	
 	gcc -D'HELLO(X)=int main(){printf("\nHello %s\n",X); }' foo.c -o foo 
 GCC allows for macro definitions as arguments into the compiler. Compiling the source code with the above 
 command is equivalent to the basic compilation command of the following:
+	
 	#define HELLO(X) int main(){printf("\nHello %s\n",X); }
 	HELLO("World")
 Which is essentially compiled to: 
+	
 	int main(){printf("\nHello %s\n","World"); 
 
 
