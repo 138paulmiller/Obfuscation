@@ -1,0 +1,6 @@
+
+This BF interpreter makes use of the heap to allocate a very large stack and input space. Most of the code is very straighforward 
+in terms of how the instructions are loaded into memory and then processed. But, I do believe this is of a particular breed of code 
+since no arrays are every directly allocated.  
+This program is only capable of interpreting the BF instruction set and any other characters read will cause undefined behaviours.
+
