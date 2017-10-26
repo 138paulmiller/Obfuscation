@@ -1,4 +1,4 @@
 CC=gcc
-SRC=p138
+SRC=lsys
 all: 
-	$(CC)  $(SRC).c -lm -o $(SRC) 
+	$(CC) -w $(SRC).c -lm -o $(SRC) 
